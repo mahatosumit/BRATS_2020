@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "Evidence-Audited Five-Fold Evaluation of a Self-Configuring 3D nnU-Net for Multimodal Glioma Segmentation on BraTS 2020: evaluation code and aggregate results"
+type: software
+authors:
+  - family-names: Mahato
+    given-names: Sumit Kumar
+    orcid: "https://orcid.org/0009-0001-5445-9568"
+    affiliation: "KPR Institute of Engineering and Technology, Coimbatore 641407, Tamil Nadu, India"
+  - family-names: Gupta
+    given-names: Ashutosh Kumar
+    orcid: "https://orcid.org/0009-0001-7377-6403"
+    affiliation: "KPR Institute of Engineering and Technology, Coimbatore 641407, Tamil Nadu, India"
+  - family-names: Sikidar
+    given-names: Arnab
+    orcid: "https://orcid.org/0000-0002-6817-5179"
+    affiliation: "KPR Institute of Engineering and Technology, Coimbatore 641407, Tamil Nadu, India"
+repository-code: "https://github.com/mahatosumit/BRATS_2020"
+keywords:
+  - BraTS 2020
+  - nnU-Net
+  - glioma segmentation
+  - reproducibility
+# version, date-released, license and doi are intentionally omitted: no licence has been
+# assigned yet (CC0 1.0 is intended but needs the agreement of all authors) and no DOI exists.

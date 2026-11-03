@@ -1,0 +1,87 @@
+{
+  "title": "Evidence-Audited Five-Fold Evaluation of a Self-Configuring 3D nnU-Net for Multimodal Glioma Segmentation on BraTS 2020",
+  "software": {
+    "nnunetv2": "2.8.1",
+    "dynamic-network-architectures": "0.4.4",
+    "torch": "2.6.0+cu124",
+    "python_training_env": "3.10"
+  },
+  "hardware": "NVIDIA RTX A4000 (per debug.json; early fold-0 epoch-time difference unexplained)",
+  "cohort": {
+    "source_directories": 369,
+    "evaluated_cases": 368,
+    "excluded": [
+      "BraTS20_Training_355 (segmentation filename not detected by the conversion step; not converted, not trained, not evaluated)"
+    ]
+  },
+  "cross_validation": {
+    "folds": 5,
+    "fold_sizes": [
+      74,
+      74,
+      74,
+      73,
+      73
+    ],
+    "train_sizes": [
+      294,
+      294,
+      294,
+      295,
+      295
+    ],
+    "split_file": "withheld (case-to-fold mapping is not part of the public release)"
+  },
+  "training": {
+    "trainer": "nnUNetTrainer",
+    "epochs": 1000,
+    "iterations_per_epoch": 250,
+    "optimizer": "SGD (Nesterov, momentum 0.99)",
+    "initial_lr": 0.01,
+    "lr_schedule": "polynomial, exponent 0.9",
+    "loss": "Dice + BCE (region-based, sigmoid) with deep supervision",
+    "deep_supervision_weights": [
+      0.5333,
+      0.2667,
+      0.1333,
+      0.0667,
+      0.0
+    ]
+  },
+  "inference_for_oof_predictions": {
+    "weights": "checkpoint_final (identified from logs, timestamps and source code; command lines for folds 1-4 not archived)",
+    "tile_step_size": 0.5,
+    "gaussian_importance_weighting": true,
+    "mirroring": "all three axes",
+    "sigmoid_threshold": 0.5,
+    "postprocessing": "none"
+  },
+  "evaluation": {
+    "regions": {
+      "ET": [
+        3
+      ],
+      "TC": [
+        2,
+        3
+      ],
+      "WT": [
+        1,
+        2,
+        3
+      ]
+    },
+    "empty_region_policy": "Dice/IoU undefined if both empty; excluded from means with valid n reported",
+    "bootstrap": {
+      "draws": 10000,
+      "seed": 20260829,
+      "type": "percentile, patient-level"
+    },
+    "hd95": "pooled bidirectional 95th percentile of 6-connected inner-surface distances, mm"
+  },
+  "reported_headline_mean_dice": {
+    "ET": 0.791,
+    "TC": 0.875,
+    "WT": 0.919
+  }
+}

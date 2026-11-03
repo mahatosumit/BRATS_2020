@@ -1,0 +1,8 @@
+# Versions used when the reported aggregate tables were generated (Python 3.10 analysis
+# environment). The aggregate tables in results/tables were re-generated bit-for-bit
+# with these versions on Python 3.13.
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.3.3
+nibabel==5.4.2        # only needed by brats_eval.evaluate (reads NIfTI)
+pytest>=8             # tests only

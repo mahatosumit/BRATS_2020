@@ -1,0 +1,12 @@
+name: brats2020-eval
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - numpy==2.2.6
+      - scipy==1.15.3
+      - pandas==2.3.3
+      - nibabel==5.4.2
+      - pytest>=8

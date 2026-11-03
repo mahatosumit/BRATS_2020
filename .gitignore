@@ -1,0 +1,105 @@
+# ---------------------------------------------------------------
+# AI-agent / assistant configuration and local metadata
+# ---------------------------------------------------------------
+.claude/
+.claude*
+.antigravity/
+.codex/
+.cursor/
+.gemini/
+.opencode/
+.windsurf/
+.continue/
+.roo/
+.aider*
+.trae/
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.idea/
+.vscode/
+
+# ---------------------------------------------------------------
+# Python environments, caches, notebooks
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# ---------------------------------------------------------------
+# Secrets and credentials
+# ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.pypirc
+.npmrc
+credentials*
+secrets*
+
+# ---------------------------------------------------------------
+# OS / editor junk and temporary files
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ---------------------------------------------------------------
+# Experiment output, raw/private data and tracking directories
+# ---------------------------------------------------------------
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+raw_data/
+data/raw/
+data/interim/
+datasets/
+checkpoints/
+weights/
+wandb/
+mlruns/
+runs/
+lightning_logs/
+tensorboard/
+cache/
+outputs/
+archive/
+BraTS2020_*/
+
+# ---------------------------------------------------------------
+# Model weights and medical imaging files (never redistributed)
+# ---------------------------------------------------------------
+*.nii
+*.nii.gz
+*.dcm
+*.mha
+*.mhd
+*.nrrd
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+
+# ---------------------------------------------------------------
+# Patient-level tables and manuscript/audit material kept out of the
+# public repository until redistribution/publication is approved
+# ---------------------------------------------------------------
+*case_metrics*.csv
+oof_*.csv
+manuscript/
+*.docx
